@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="demo">
+        <button onclick="serchWords()">Search</button><input type="text" value="">
+        <ul style="list-style-type:none">
+            <li>Java</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>Vue.js</li>
+            <li>React</li>
+            <li>Angular</li>
+        </ul>
+        
+    </div>
+    <script>
+        let programLists = ["Java","JavaScript","Python","Vue.js","React","Angular"];
+        function serchWords() {
+            // alert("OK");
+            let content =  document.querySelector("input").value ;
+            liTags = document.querySelectorAll("li");
+            // console.log(liTags.length);
+            for(let i =0;i<liTags.length;i++){
+                // console.log(liTags[i].innerText);
+                if(liTags[i].innerText.indexOf(content) >= 1 ){
+                //   document.querySelector("ul").innerHTML="<li></li>"
+                document.querySelector("li").append(`${liTags[i].innerText} `)
+                   
+                }   
+            }
+         }
+        
+        
+        // for (let i=0;i<programLists.length;i++){
+        //     liTags = document.createElement("li")
+        //     let liTag = document.querySelector("li");
+        //     liTag.appendChild(liTags);
+        //     liTag.innerHTML = programLists[i];
+        // }
+    </script>
+</body>
+</html>

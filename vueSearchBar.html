@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+</head>
+<body>
+    <div id="demo">
+        <button>Search</button><input type="text" v-model="item">
+        <ul style="list-style-type:none">
+            <li v-for="item in programLists">{{item}}</li>
+        </ul>
+        <p>{{message}}</p>
+    </div>
+    <script>
+        new Vue({
+            el:"#demo",
+            data:{
+                programLists:["Java","JavaScript","Python","Vue.js","React","Angular"],
+                searchWords:""
+            },
+            method
+           
+        }) 
+    </script>
+</body>
+</html>

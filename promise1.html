@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="demo"></div>
+   
+    <script>
+      // promise 練習一，一般情況下
+      let user;
+      $.get("https://api.github.com/users",data=>{
+          console.log("get response data");
+          user = data[0].login;
+          console.log(user);
+
+       
+      })
+      $.get(`https://api.github.com/users/${user}/repos`,data2=>{
+          console.log("get response data another");
+          console.log(data2)
+      })
+    </script>
+   
+</body>
+</html>
